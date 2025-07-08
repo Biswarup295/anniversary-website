@@ -29,11 +29,17 @@ nav ul li a {
 }
 
 .hero {
-  padding: 3em 1em;
-  text-align: center;
+  height: 100vh; /* Full screen height */
+  width: 100vw;  /* Full screen width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: url('https://images.theconversation.com/files/122137/original/image-20160511-18171-kulas4.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=926&fit=clip') no-repeat center/cover;
   color: #fff;
   text-shadow: 1px 1px 3px #000000aa;
+  padding: 2em;
+  box-sizing: border-box;
 }
 
 .hero h2 {
