@@ -97,25 +97,28 @@
       z-index: 1;
     }
     .falling span {
-      position: absolute;
-      display: block;
-      width: 24px;
-      height: 24px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      animation: fall linear infinite;
-      opacity: 0.95;
-    }
-    @keyframes fall {
-      0% {
-        transform: translateY(-10%) rotate(0deg);
-        opacity: 0.5;
-      }
-      100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0.9;
-      }
-    }
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fall linear infinite;
+  opacity: 1;
+  filter: drop-shadow(0 0 5px #f9b5d1);
+}
+
+   @keyframes fall {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 1;
+  }
+}
+  
   </style>
 </head>
 <body>
