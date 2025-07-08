@@ -1,4 +1,4 @@
-<!-- parallax-anniversary.html -->
+<!-- parallax-anniversary.html with cherry blossom and heart rain -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Love Story - Parallax Edition</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/833/833472.png">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      cursor: url('https://cur.cursors-4u.net/nature/nat-10/nat964.cur'), auto;
     }
     html, body {
       scroll-behavior: smooth;
       font-family: 'Segoe UI', sans-serif;
+      background: #fffafc;
+      overflow-x: hidden;
     }
     header {
       background: #ffe6f0;
@@ -50,6 +54,20 @@
       color: white;
       text-shadow: 1px 1px 5px #000000aa;
     }
+    .parallax h2 {
+      font-size: 3em;
+      color: #fff;
+      text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66b2, 0 0 30px #ff3399;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff99cc, 0 0 10px #ff66b2, 0 0 15px #ff3399;
+      }
+      to {
+        text-shadow: 0 0 20px #ff99cc, 0 0 30px #ff66b2, 0 0 40px #ff3399;
+      }
+    }
     .section {
       padding: 5em 2em;
       background: #fffafc;
@@ -67,9 +85,65 @@
       font-size: 0.9em;
       color: #555;
     }
+
+    /* 🌸 Blossom and Heart Rain */
+    .falling {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .falling span {
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-10%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(110vh);
+        opacity: 0.9;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- 🌸 Background Music -->
+  <audio autoplay loop hidden>
+    <source src="https://cdn.pixabay.com/audio/2022/11/08/audio_f3acdeff96.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- 🌸 Floating cherry blossoms and hearts -->
+  <div class="falling" id="falling-container"></div>
+  <script>
+    const fallingContainer = document.getElementById('falling-container');
+    const icons = [
+      'https://cdn-icons-png.flaticon.com/128/744/744465.png', // cherry blossom
+      'https://cdn-icons-png.flaticon.com/128/833/833472.png'  // heart
+    ];
+    for (let i = 0; i < 40; i++) {
+      const span = document.createElement('span');
+      span.style.left = Math.random() * 100 + 'vw';
+      span.style.animationDuration = 5 + Math.random() * 5 + 's';
+      span.style.animationDelay = Math.random() * 5 + 's';
+      span.style.width = span.style.height = 20 + Math.random() * 15 + 'px';
+      span.style.backgroundImage = `url('${icons[Math.floor(Math.random() * icons.length)]}')`;
+      fallingContainer.appendChild(span);
+    }
+  </script>
+
   <header>
     <h1>Tanjirou & Nezuko</h1>
     <nav>
@@ -85,7 +159,7 @@
 
   <section id="home" class="parallax" style="background-image: url('https://i.imgur.com/BkZ9Ipu.jpg');">
     <div>
-      <h2 style="font-size: 3em; color: #fff;">Happy 1st Anniversary</h2>
+      <h2>Happy 1st Anniversary</h2>
       <p style="font-size: 1.2em;">Every love story is beautiful, but ours is my favorite.</p>
     </div>
   </section>
@@ -131,5 +205,3 @@
   </footer>
 </body>
 </html>
-
-<!-- To use this as your main site, rename it index.html and add your own images/messages -->
