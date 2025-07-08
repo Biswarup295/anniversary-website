@@ -1,0 +1,76 @@
+<!-- surprise.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .surprise {
+      max-width: 800px;
+      margin: 4em auto;
+      background: #fff0f5;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .surprise h2 {
+      color: #d14f72;
+      margin-bottom: 1em;
+    }
+    .hidden-content {
+      display: none;
+      margin-top: 1.5em;
+      font-size: 1.2em;
+    }
+    button {
+      background: #fbb1bd;
+      border: none;
+      padding: 0.75em 1.5em;
+      border-radius: 8px;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #d14f72;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Surprise!</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="letters.html">Love Letters</a></li>
+        <li><a href="surprise.html">Surprise</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="surprise">
+      <h2>Click below to reveal your surprise 💝</h2>
+      <button onclick="document.getElementById('secret').style.display='block'; this.style.display='none';">
+        Reveal Surprise
+      </button>
+      <div id="secret" class="hidden-content">
+        <p>🎥 <strong>Here’s a little video I made just for you:</strong></p>
+        <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Click to watch your surprise video 💕</a></p>
+        <p>...and yes, there’s more coming soon 😘</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tanjirou & Nezuko</p>
+  </footer>
+</body>
+</html>
+
+<!-- You can change the video link above to your own secret message or custom video -->
