@@ -84,4 +84,13 @@ footer {
 .gallery-grid img:hover {
   transform: scale(1.05);
 }
+.letter-image {
+  max-width: 100%;
+  width: 400px;       /* control this value */
+  display: block;
+  margin: 1em auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 
