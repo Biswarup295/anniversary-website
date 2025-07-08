@@ -1,38 +1,135 @@
-<!-- index.html -->
+<!-- parallax-anniversary.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Anniversary</title>
+  <title>Our Love Story - Parallax Edition</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    header {
+      background: #ffe6f0;
+      padding: 1em 0;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #d14f72;
+      font-weight: bold;
+    }
+    .parallax {
+      min-height: 100vh;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2em;
+      color: white;
+      text-shadow: 1px 1px 5px #000000aa;
+    }
+    .section {
+      padding: 5em 2em;
+      background: #fffafc;
+      color: #333;
+    }
+    .section h2 {
+      color: #c2185b;
+      margin-bottom: 1em;
+      font-size: 2.5em;
+    }
+    footer {
+      background: #ffe6f0;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Tanjirou & Nezuko</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="story.html">Our Story</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="letters.html">Love Letters</a></li>
-        <li><a href="surprise.html">Surprise</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#letters">Letters</a></li>
+        <li><a href="#surprise">Surprise</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-  <div class="overlay">
-    <h2>Happy 1st Anniversary</h2>
-    <p>"Every love story is beautiful, but ours is my favorite."</p>
-  </div>
-</section>
+  <section id="home" class="parallax" style="background-image: url('https://i.imgur.com/BkZ9Ipu.jpg');">
+    <div>
+      <h2 style="font-size: 3em; color: #fff;">Happy 1st Anniversary</h2>
+      <p style="font-size: 1.2em;">Every love story is beautiful, but ours is my favorite.</p>
+    </div>
+  </section>
 
-  </main>
+  <section id="story" class="section">
+    <h2>Our Story</h2>
+    <p>We met, we laughed, we loved. Here's our journey so far.</p>
+    <ul>
+      <li><strong>First Met:</strong> A day that changed everything.</li>
+      <li><strong>First Date:</strong> Butterflies and hand-holding.</li>
+      <li><strong>I Love You:</strong> A magical confession.</li>
+      <li><strong>Moments & Memories:</strong> Countless.</li>
+      <li><strong>One Year Later:</strong> Still smiling like day one.</li>
+    </ul>
+  </section>
+
+  <section id="gallery" class="parallax" style="background-image: url('https://i.imgur.com/l49aYS3.jpg');">
+    <div>
+      <h2>Our Gallery</h2>
+      <p>Smiles captured forever 💕</p>
+    </div>
+  </section>
+
+  <section id="letters" class="section">
+    <h2>Love Letters</h2>
+    <p>Every word written with love and care.</p>
+    <div class="letter">
+      <p>
+        From silly conversations to deep moments, every second with you feels like home. Thank you for choosing me — every single day. ❤️
+      </p>
+    </div>
+  </section>
+
+  <section id="surprise" class="parallax" style="background-image: url('https://i.imgur.com/v1l6K7v.jpg');">
+    <div>
+      <h2>💝 Click to Reveal Your Surprise 💝</h2>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style="background: #fbb1bd; color: white; padding: 1em 2em; text-decoration: none; border-radius: 8px; display: inline-block;">Watch Video</a>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Tanjirou & Nezuko</p>
+    <p>&copy; 2025 Tanjirou & Nezuko — Made with love 🌸</p>
   </footer>
 </body>
 </html>
+
+<!-- To use this as your main site, rename it index.html and add your own images/messages -->
